@@ -11,20 +11,20 @@ body {
 .background-container {
     width: 35vw;
     height: 100vh;
+
+    display: flex;
+    justify-content: center;
 }
 
 .background-image {
     height: 100%;
     width: 100%;
     object-fit: cover;
-
-    position: relative;
 }
 
 .image-text {
     position: absolute;
     bottom: 0px;
-    left: 6%;
 
     color: #ffffffff;
 }
