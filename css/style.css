@@ -21,6 +21,8 @@ body {
 
     display: flex;
     justify-content: center;
+
+    position: relative;
 }
 
 .background-image {
@@ -32,18 +34,20 @@ body {
 .logo-container {
     position: absolute;
     top: 18vh;
+    left: 0;
+    right: 0;
 
     background-color: #242424;
     opacity: 0.3;
-    width: 35vw;
     padding: 4vh 0;
 
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .logo-image {
-    width: 100px;
+    max-width: 100px;
 }
 
 .logo-text {
@@ -62,7 +66,7 @@ body {
     color: #ffffffff;
 }
 
-a {
+.image-link {
     color:#ffffffff;
 }
 
@@ -71,8 +75,9 @@ a {
 
     width: 60vw;
     max-width: 550px;
+
     margin-left: 30px;
-    padding-top: 15vh;
+    margin-top: 18vh;
     margin-bottom: 20px;
 }
 
@@ -82,18 +87,18 @@ a {
     width: 65vw;
     padding-top: 10px;
     padding-bottom: 30px;
-    box-shadow: 0px 2px 5px #ccc;
+    box-shadow: 5px 2px 5px #929292;
 }
 
 .form {
     display: flex;
     flex-wrap: wrap;
+    gap: 10%;
 
     width: 100%;
     max-width: 550px;
     margin-left: 30px;
     margin-right: 30px;
-    height: 35vh;
 }
 
 h2 {
@@ -109,20 +114,45 @@ input {
     font-size: 100%;
     padding: 0px;
     margin: 0;
+    margin-bottom: 30px;
     box-sizing: border-box;
     width: 100%;
     height: 30px;
     border-radius: 4px;
 }
 
-label,
 input {
-    padding-right: 50px;
+    padding-left: 5px;
+    border: 1px solid silver;
 }
 
-input,
 button {
-    border: 1px solid silver;
+    width: 35%;
+    max-width: 220px;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 50px;
+    padding: 10px 10px;
+
+    border: none;
+    box-shadow: 2px 2px 4px #ccc;
+
+    color: #ffffffff;
+    background-color: #38751c;
+
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.existing-account {
+    text-decoration: none;
+    color: #38751c;
+    font-weight: bold;
+}
+
+.existing-account-container {
+    margin-left: 30px;
 }
 
 .form-first-name,
@@ -131,8 +161,8 @@ button {
 .form-phone,
 .form-pwd,
 .form-pwd-confirm {
-    flex: 0 0 100%;
-    max-width: 100%;
+    flex: 0 0 90%;
+    max-width: 90%;
 }
 
 @media (min-width: 600px) {
@@ -142,7 +172,20 @@ button {
     .form-phone,
     .form-pwd,
     .form-pwd-confirm {
-    flex: 0 0 50%;
-    max-width: 50%;
+    flex: 0 0 45%;
+    max-width: 45%;
     }
+}
+
+input:focus {
+    outline: 2px solid #1d77ff;
+    box-shadow: 4px 4px 5px #ccc;
+}
+
+input:invalid {
+    outline: 2px solid #fd5353;
+}
+
+button:hover {
+    cursor: pointer;
 }

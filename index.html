@@ -14,13 +14,13 @@
             <img class="logo-image" src="img/mountain3.png" alt="">
             <div class="logo-text">MOUNTAIN</div>
         </div>
-        <p class="image-text">Photo by <a href="https://unsplash.com/@withguillermo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Guillermo</a> on <a href="https://unsplash.com/photos/a-view-of-a-valley-with-mountains-in-the-background--O_4f6HlTD4">Unsplash</a></p>
+        <p class="image-text">Photo by <a class="image-link" href="https://unsplash.com/@withguillermo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Guillermo</a> on <a class="image-link" href="https://unsplash.com/photos/a-view-of-a-valley-with-mountains-in-the-background--O_4f6HlTD4">Unsplash</a></p>
     </div>
     <div>
         <h1 class="site-pitch">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.<br><br> Sign up now to get started.</h1>
         <div class="form-container">
             <h2>Let's do this!</h2>
-            <form class="form" action="" method="post">
+            <form id="account-form" class="form" action="" method="post">
                     <div class="form-first-name">
                         <label for="first-name">First name
                             <input type="text" id="first-name" name="first-name"></label></div>
@@ -38,10 +38,11 @@
                             <input type="password" id="user-password" name="user-password"></label></div>
                     <div class="form-pwd-confirm">
                         <label for="user-password-confirm">Confirm password
-                            <input type="text" id="user-password-confirm" name="user-password-confirm"></label></div>
-                    <div class="form-button"><button type="submit">Create Account</button></div>
+                            <input type="password" id="user-password-confirm" name="user-password-confirm"></label></div>
             </form>
         </div>
+        <div class="form-button"><button type="submit" form="account-form">Create Account</button></div>
+        <div class="existing-account-container">Already have an account? <a class="existing-account" href="">Log in</a></div>
     </div>
 </body>
 </html>
