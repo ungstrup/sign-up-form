@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'logoFont';
+    src: url('../fonts/logoFont.woff2') format('woff2');
+}
+
 body {
     display: flex;
     flex-direction: row;
@@ -18,27 +23,36 @@ body {
     justify-content: center;
 }
 
-.logo-container {
-    position: absolute;
-    top: 15vh;
-
-    width: 35vw;
-    height: 25vh;
-
-    background-color: #7a7a7a;
-    opacity: 0.4;
-}
-
 .background-image {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
-.logo-image {
+.logo-container {
     position: absolute;
-    width: 15%;
-    top: 20vh;
+    top: 18vh;
+
+    background-color: #242424;
+    opacity: 0.3;
+    width: 35vw;
+    padding: 4vh 0;
+
+    display: flex;
+    justify-content: center;
+}
+
+.logo-image {
+    width: 100px;
+}
+
+.logo-text {
+    margin-top: 4vh;
+    margin-left: 5px;
+
+    font-family: 'logoFont';
+    font-size: 1.8em;
+    color: #ffffffff;
 }
 
 .image-text {
