@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up form</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
     <div class="background-container">
@@ -20,28 +21,34 @@
         <h1 class="site-pitch">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.<br>Sign up <span class="italic-text">now</span> to get started.<br><br>You <span class="italic-text">know</span> you want to.</h1>
         <div class="form-container">
             <h2>Let's do this!</h2>
-            <form id="account-form" class="form" action="" method="post">
+            <form id="account-form" class="form">
                     <div class="form-first-name">
                         <label for="first-name">First name
-                            <input type="text" id="first-name" name="first-name"></label></div>
+                            <input type="text" id="first-name" name="first-name" required></label>
+                            <p class="error name-error"></p>
+                        </div>
                     <div class="form-last-name">
                         <label for="last-name">Last name
                             <input type="text" id="last-name" name="last-name"></label></div>
                     <div class="form-email">
                         <label for="user-email">Email
-                            <input type="email" id="user-email" name="user-email"></label></div>
+                            <input type="email" id="user-email" name="user-email" required></label>
+                            <p class="error email-error"></p>
+                        </div>
                     <div class="form-phone">
                         <label for="user-phone">Phone number
                             <input type="tel" id="user-phone" name="user-phone"></label></div>
                     <div class="form-pwd">
                         <label for="user-password">Password
-                            <input type="password" id="user-password" name="user-password"></label></div>
+                            <input type="password" id="user-password" name="user-password" required></label>
+                            <p class="error pwd-error"></p>
+                        </div>
                     <div class="form-pwd-confirm">
                         <label for="user-password-confirm">Confirm password
-                            <input type="password" id="user-password-confirm" name="user-password-confirm"></label></div>
+                            <input type="password" id="user-password-confirm" name="user-password-confirm" required></label></div>
             </form>
         </div>
-        <div class="form-button"><button type="button" form="account-form">Create Account</button></div>
+        <div class="form-button"><button type="submit" form="account-form">Create Account</button></div>
         <div class="existing-account-container">Already have an account? <a class="existing-account" href="">Log in</a></div>
     </div>
 </body>
